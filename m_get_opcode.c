@@ -26,8 +26,11 @@ while (i < size)
 {
 if (strcmp(opcode, opcode_list[i].opcode) == 0)
 {
-opcode_list[i].f(stack, line_number);								      return (0);											    }
-i++;												      }
+opcode_list[i].f(stack, line_number);
+return (0);
+}
+i++;
+}
 fprintf(stderr, "L%d: unknown instruction %s\12", line_number, opcode);
 exit(EXIT_FAILURE);
 }
